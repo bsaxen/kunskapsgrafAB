@@ -3,6 +3,8 @@ $sessdir = dirname(dirname(__FILE__)).'/session_dir';
 ini_set('session.save_path', $sessdir); 
 session_start();
 $sel_content = $_SESSION["sel_content"];
+if ($sel_content == NULL)
+    $sel_content = 'home';
 
 if (isset($_GET['do']))
 {
@@ -40,7 +42,7 @@ body {
 .column {
   float: left;
   padding: 10px;
-  height: 100px; /* Should be removed. Only for demonstration */
+  /*height: 100px;*/ /* Should be removed. Only for demonstration */
 }
 
 /* Left and right column */
@@ -104,30 +106,34 @@ a:active {
 </div>
 
 <div class="row">
-  <div class="column side" style="background-color:#aaa;">
-  <a href="index.php?do=presentations">presentationer</a><br>
-  <a href="index.php?do=training">utbildning</a><br>
-  <a href="index.php?do=project">projekt</a><br>
-  <a href="index.php?do=contact">kontakt</a><br>
+  <div class="column side" style="background-color:white;">
+  <ul>
+  <li><a href="index.php?do=presentations">presentationer</a></li>
+  <li><a href="index.php?do=training">utbildning</a></li>
+  <li><a href="index.php?do=projects">projekt</a></li>
+  <li><a href="index.php?do=contact">kontakt</a></li>
+  </ul>
   </div>
   
   
-  <div class="column middle" style="background-color:#bbb;">
+  <div class="column middle" style="background-color:white;">
   <?php
-    include 'content/$sel_content.php';
+    include "content/$sel_content.php";
   ?>
   </div>
 
 
-  <div class="column side" style="background-color:#ccc;">
-  <a href="index.php?do=graphtechnology">grafteknologi</a><br> 
-  <a href="index.php?do=graphtheory">grafteori</a><br> 
-  <a href="index.php?do=links">länkar</a><br>
+  <div class="column side" style="background-color:white;">
+  <ul>
+  <li><a href="index.php?do=graphtechnology">grafteknologi</a></li>
+  <li><a href="index.php?do=graphtheory">grafteori</a></li>
+  <li><a href="index.php?do=links">länkar</a></li>
+  </ul>
   </div>
 </div>
 
 <div class="footer">
-  <p>2020 kunskapsgraf AB</p>
+  <a href="index.php?do=home">2020 kunskapsgraf AB</a>
 </div>
 
 </body>

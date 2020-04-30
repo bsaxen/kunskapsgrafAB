@@ -1,3 +1,3 @@
 <?php
-echo "Links";
+echo "<h3>Länkar</h3>";
 ?>
