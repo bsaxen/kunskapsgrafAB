@@ -18,7 +18,7 @@ $_SESSION["sel_content"] = $sel_content;
 <!DOCTYPE html>
 <html lang="se">
 <head>
-<title>CSS Template</title>
+<title>kunskapsgraf AB</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
