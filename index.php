@@ -28,6 +28,11 @@ $_SESSION["sel_content"] = $sel_content;
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url('vinter.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  /*color:red;*/
 }
 
 /* Style the header */
@@ -48,6 +53,7 @@ body {
 /* Left and right column */
 .column.side {
   width: 25%;
+  /*background-color:white;*/
 }
 
 /* Middle column */
@@ -99,6 +105,7 @@ a:active {
 
 </style>
 </head>
+
 <body>
 
 <div class="header">
@@ -106,7 +113,7 @@ a:active {
 </div>
 
 <div class="row">
-  <div class="column side" style="background-color:white;">
+  <div class="column side" >
   <ul>
   <li><a href="index.php?do=presentations">presentationer</a></li>
   <li><a href="index.php?do=training">utbildning</a></li>
@@ -116,14 +123,14 @@ a:active {
   </div>
   
   
-  <div class="column middle" style="background-color:white;">
+  <div class="column middle" >
   <?php
     include "content/$sel_content.php";
   ?>
   </div>
 
 
-  <div class="column side" style="background-color:white;">
+  <div class="column side" >
   <ul>
   <li><a href="index.php?do=graphtechnology">grafteknologi</a></li>
   <li><a href="index.php?do=graphtheory">grafteori</a></li>
@@ -137,6 +144,7 @@ a:active {
 </div>
 
 </body>
+
 </html>
 <?php
 
